@@ -27,7 +27,7 @@ This project focuses on detecting American Sign Language (ASL) gestures using ma
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/pritesh-sh21/MIniProject2.git
+   git clone https://github.com/yakshita24/SignLanguage_AMSS.git
 
 2. Navigate to the project directory:
     ```bash
