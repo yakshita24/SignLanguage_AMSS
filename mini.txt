@@ -1,0 +1,43 @@
+->static_image_mode=True sets the mode to process static images rather than a video stream.
+->min_detection_confidence=0.3 sets the minimum confidence threshold for detection of a hand landmark.
+
+Any detection with a lower confidence score than this threshold will be discarded.
+The min_detection_confidence parameter in the Hands class constructor is used to set a minimum confidence threshold
+for the detection of hand landmarks.
+
+When the Hands object processes an image or video frame, it detects and returns a set of hand landmarks,
+each with a confidence score between 0 and 1. This confidence score indicates how confident the model is
+that a particular landmark is present in the image.
+
+By setting min_detection_confidence=0.3, any landmarks detected with a confidence score lower than 0.3 will be discarded.
+This means that the returned set of landmarks will only include those that the model is relatively certain are present in the image.
+
+Setting a higher threshold value will result in a more conservative detection strategy, potentially filtering out some false
+positives but also potentially missing some true positives. Conversely, setting a lower threshold value will result in a more
+aggressive detection strategy, potentially capturing more true positives but also potentially including more false positives.
+The optimal threshold value will depend on the specific use case and the trade-off between precision and recall.
+
+Underfitting: A statistical model or a machine learning algorithm is said to have underfitting when it cannot capture the underlying trend of
+the data, i.e., it only performs well on training data but performs poorly on testing data.
+Overfitting: A statistical model is said to be overfitted when the model does not make accurate predictions on testing data.
+When a model gets trained with so much data, it starts learning from the noise and inaccurate data entries in our data set.
+And when testing with test data results in High variance. Then the model does not categorize the data correctly,
+because of too many details and noise.
+
+In machine learning, "features" refer to the input variables or attributes that are used to train a model and make predictions on new data.
+These features can take many forms depending on the problem and the data.
+For example, if you are working on a natural language processing (NLP) problem, the features may be words or phrases that have been
+extracted from text. If you are working on an image classification problem, the features may be pixel values of the image.
+
+Yes, the hand landmarks extracted using the Mediapipe library can be used as features for sign language recognition. The landmarks represent the positions of specific points on the hand, such as fingertips, knuckles, and wrist, and can be used to identify different hand gestures and movements.
+
+The landmarks can be extracted from images or video frames using the Mediapipe library and represented as a feature matrix, where each row corresponds to an individual observation or sample (i.e., a frame of video or image), and each column corresponds to a specific landmark point.
+
+You can then use these landmark features to train a machine learning model for sign language recognition. The specific machine learning algorithm and model architecture will depend on the problem and the data, and may involve additional feature engineering or preprocessing steps.
+
+Overall, the hand landmarks extracted using the Mediapipe library can be a useful source of features for sign language recognition and other related tasks involving hand gesture recognition.
+
+
+
+
+
